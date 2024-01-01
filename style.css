@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --primary: hsl(47, 88%, 63%);
   --card-bg: hsl(0, 0%, 100%);
   --text: hsl(0, 0%, 50%);
   --title: hsl(0, 0%, 7%);
-}
-
-* {
-  box-sizing: border-box;
 }
 
 html {
@@ -34,11 +34,15 @@ body {
 }
 
 .preview__card {
+  max-width: 300px;
   background-color: var(--card-bg);
-  max-width: 350px;
-  border-radius: 15px;
   outline: 1px solid var(--title);
   box-shadow: 10px 10px var(--title);
+}
+
+.preview__card,
+.card__container > img {
+  border-radius: 15px;
 }
 
 .card__container {
@@ -48,24 +52,23 @@ body {
 
 .card__container > img {
   width: 100%;
-  border-radius: 15px;
 }
 
 .card__tag {
-  padding: 7px 10px;
-  background-color: var(--primary);
   width: fit-content;
-  font-size: 14px;
+  padding: 7px 10px;
   margin: 15px 0;
-  font-weight: 800;
   border-radius: 5px;
+  font-size: 14px;
+  font-weight: 800;
+  background-color: var(--primary);
 }
 
 .card__author {
-  margin-bottom: 0;
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 0;
 }
 
 .card__text {
